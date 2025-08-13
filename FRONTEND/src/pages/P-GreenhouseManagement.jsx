@@ -4,7 +4,7 @@ import Card from '../Components/P-Card.jsx';
 import Button from '../Components/P-Button.jsx';
 import Modal from '../Components/P-Modal.jsx';
 import { Plus, Search, Edit, Trash, X, Check, ChevronDown, ChevronUp, Upload } from 'lucide-react';
-import '../styles/GreenhouseManagement.css';
+import '../styles/P-GreenhouseManagement.css';
 const GreenhouseManagement = () => {
   const {
     t

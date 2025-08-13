@@ -2,7 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Sidebar from './P-Sidebar';
 import Header from './P-Header';
-import '../styles/Layout.css';
+import '../styles/P-Layout.css';
 
 const Layout = () => {
   return (

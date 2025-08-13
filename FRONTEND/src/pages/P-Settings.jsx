@@ -3,7 +3,7 @@ import { useTheme } from '../context/ThemeContext.jsx';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import Button from '../Components/P-Button.jsx';
 import { Moon, Sun, Globe, UserCog, Key, ServerCog, Save } from 'lucide-react';
-import '../styles/Settings.css';
+import '../styles/P-Settings.css';
 const Settings = () => {
   const {
     theme,

@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import ThemeToggle from './P-ThemeToggle';
 import LanguageSwitcher from './P-LanguageSwitcher';
 import { User, LogOut, ChevronDown } from 'lucide-react';
-import '../styles/Header.css';
+import '../styles/P-Header.css';
 const Header = () => {
   const {
     t

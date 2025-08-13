@@ -4,7 +4,7 @@ import Button from '../Components/P-Button.jsx';
 import Modal from '../Components/P-Modal.jsx';
 import { Plus, FileDown, Calendar as CalendarIcon, ChevronLeft, ChevronRight, Edit, Trash, Download, Check, Upload, Filter } from 'lucide-react';
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import '../styles/InspectionManagement.css';
+import '../styles/P-InspectionManagement.css';
 const InspectionManagement = () => {
   const {
     t

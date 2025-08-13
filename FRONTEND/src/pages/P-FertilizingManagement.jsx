@@ -4,7 +4,7 @@ import Button from '../Components/P-Button.jsx';
 import Modal from '../Components/P-Modal.jsx';
 import { Plus, FileDown, Edit, Trash, Check, Download, Calendar } from 'lucide-react';
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import '../styles/FertilizingManagement.css';
+import '../styles/P-FertilizingManagement.css';
 const FertilizingManagement = () => {
   const {
     t

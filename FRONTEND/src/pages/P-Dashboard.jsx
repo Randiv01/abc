@@ -4,7 +4,7 @@ import Card from '../Components/P-Card.jsx';
 import Button from '../Components/P-Button.jsx';
 import { Plus, FileDown, AlertTriangle, Calendar, TrendingUp, Warehouse, CheckCircle, XCircle, Wrench } from 'lucide-react';
 import { LineChart, Line, AreaChart, Area, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import '../styles/Dashboard.css';
+import '../styles/P-Dashboard.css';
 const Dashboard = () => {
   const {
     t

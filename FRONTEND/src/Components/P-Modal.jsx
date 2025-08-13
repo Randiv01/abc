@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { X } from 'lucide-react';
-import '../styles/Modal.css';
+import '../styles/P-Modal.css';
 const Modal = ({
   title,
   children,

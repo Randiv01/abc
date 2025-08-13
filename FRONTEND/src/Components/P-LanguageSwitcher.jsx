@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Globe, ChevronDown } from 'lucide-react';
-import '../styles/LanguageSwitcher.css';
+import '../styles/P-LanguageSwitcher.css';
 const LanguageSwitcher = () => {
   const {
     language,

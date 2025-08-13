@@ -3,7 +3,7 @@ import { useLanguage } from '../context/LanguageContext.jsx';
 import Card from '../Components/P-Card';
 import { Thermometer, Droplet, Sprout, Wind, Lightbulb, Waves, AlertTriangle, WifiOff, Bell } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import '../styles/MonitorControl.css';
+import '../styles/P-MonitorControl.css';
 const MonitorControl = () => {
   const {
     t

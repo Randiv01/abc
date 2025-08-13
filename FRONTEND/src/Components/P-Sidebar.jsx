@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { LayoutDashboard, Warehouse, ClipboardCheck, Sprout, Bug, Gauge, TrendingUp, Settings, Menu, X } from 'lucide-react';
-import '../styles/Sidebar.css';
+import '../styles/P-Sidebar.css';
 
 const Sidebar = () => {
   const { t } = useLanguage();

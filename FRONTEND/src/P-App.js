@@ -11,7 +11,7 @@ import Productivity from './pages/P-Productivity.jsx';
 import Settings from './pages/P-Settings.jsx';
 import { ThemeProvider } from './context/ThemeContext.jsx';
 import { LanguageProvider } from './context/LanguageContext.jsx';
-import './styles/App.css';
+import './styles/P-App.css';
 
 export function App() {
   return (
