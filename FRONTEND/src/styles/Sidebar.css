@@ -1,0 +1,99 @@
+.sidebar {
+  width: var(--sidebar-width);
+  height: 100vh;
+  background-color: var(--card-bg);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  transition: width var(--transition-speed) ease;
+  z-index: 100;
+  box-shadow: var(--shadow);
+}
+.sidebar.collapsed {
+  width: var(--sidebar-collapsed-width);
+}
+.logo-container {
+  height: var(--header-height);
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--primary);
+}
+.toggle-button {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color var(--transition-speed) ease;
+}
+.toggle-button:hover {
+  background-color: var(--border);
+}
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+  flex: 1;
+  overflow-y: auto;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  color: var(--text);
+  text-decoration: none;
+  transition: background-color var(--transition-speed) ease;
+  border-left: 3px solid transparent;
+  gap: 12px;
+  margin: 4px 0;
+}
+.nav-item:hover {
+  background-color: rgba(102, 187, 106, 0.1);
+  text-decoration: none;
+}
+.nav-item.active {
+  background-color: rgba(102, 187, 106, 0.15);
+  border-left-color: var(--primary);
+  color: var(--primary);
+  font-weight: 500;
+}
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+}
+@media screen and (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .sidebar.collapsed {
+    height: var(--header-height);
+  }
+  .nav-menu {
+    display: none;
+  }
+  .sidebar:not(.collapsed) .nav-menu {
+    display: flex;
+  }
+}

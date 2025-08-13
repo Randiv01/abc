@@ -1,0 +1,26 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+.content-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: margin-left var(--transition-speed) ease;
+}
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+  background-color: var(--background);
+}
+@media screen and (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+  .content-container {
+    margin-left: 0 !important;
+  }
+}
