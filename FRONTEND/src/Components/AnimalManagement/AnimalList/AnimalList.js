@@ -3,6 +3,10 @@ import { useParams, useNavigate } from "react-router-dom";
 import TopNavbar from "../TopNavbar/TopNavbar.js";
 import Sidebar from "../Sidebar/Sidebar.js";
 import "./AnimalList.css";
+import { useTheme } from '../contexts/ThemeContext.js';
+import QRCode from "qrcode.react";
+import { QRCodeCanvas } from "qrcode.react";
+import { QRCodeSVG } from "qrcode.react";
 
 export default function AnimalList() {
   const { type } = useParams();
@@ -30,7 +34,8 @@ export default function AnimalList() {
     notes: "",
   });
 
-  const [darkMode, setDarkMode] = useState(false);
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   const handleMenuClick = () => setSidebarOpen(!sidebarOpen);
@@ -128,9 +133,8 @@ export default function AnimalList() {
 
   return (
     <div className={`animal-page ${darkMode ? "dark" : ""}`}>
-      <Sidebar darkMode={darkMode} sidebarOpen={sidebarOpen} type={type} />
-
-      <TopNavbar darkMode={darkMode} setDarkMode={setDarkMode} onMenuClick={handleMenuClick} />
+       <Sidebar sidebarOpen={sidebarOpen} type={type} />
+       <TopNavbar onMenuClick={handleMenuClick} />
 
       <main className="main-content">
         <div className={`animal-list-container ${darkMode ? "dark" : ""}`}>
@@ -152,6 +156,7 @@ export default function AnimalList() {
             <table className={`animal-table ${darkMode ? "dark" : ""}`}>
               <thead>
                 <tr>
+                  <th>QR Code</th>
                   <th>Name</th>
                   <th>Breed</th>
                   <th>Age</th>
@@ -179,6 +184,13 @@ export default function AnimalList() {
                 ) : (
                   animals.map((animal) => (
                     <tr key={animal._id}>
+                    <td>
+                      {animal.qrCode ? (
+                        <QRCodeCanvas value={animal.qrCode} size={50} />
+                      ) : (
+                        "-"
+                      )}
+                    </td>
                       <td>
                         {editId === animal._id ? (
                           <input

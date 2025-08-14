@@ -25,24 +25,24 @@ const Sidebar = () => {
   };
 
   return (
-    <div className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>
-      <div className="logo-container">
-        <div className="logo">
+    <div className={`pm-sidebar ${isCollapsed ? 'pm-collapsed' : ''}`}>
+      <div className="pm-logo-container">
+        <div className="pm-logo">
           <Sprout size={24} />
           {!isCollapsed && <span>Smart Farm</span>}
         </div>
-        <button className="toggle-button" onClick={toggleSidebar}>
+        <button className="pm-toggle-button" onClick={toggleSidebar}>
           {isCollapsed ? <Menu size={20} /> : <X size={20} />}
         </button>
       </div>
-      <nav className="nav-menu">
+      <nav className="pm-nav-menu">
         {navItems.map(item => (
           <Link
             key={item.path}
             to={item.path}
-            className={`nav-item ${location.pathname.startsWith(item.path) ? 'active' : ''}`}
+            className={`pm-nav-item ${location.pathname.startsWith(item.path) ? 'pm-active' : ''}`}
           >
-            <div className="nav-icon">{item.icon}</div>
+            <div className="pm-nav-icon">{item.icon}</div>
             {!isCollapsed && <span>{t(item.label)}</span>}
           </Link>
         ))}

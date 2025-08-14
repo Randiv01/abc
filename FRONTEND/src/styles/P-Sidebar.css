@@ -1,18 +1,21 @@
-.sidebar {
-  width: var(--sidebar-width);
+.pm-sidebar {
+  width: 240px;
   height: 100vh;
   background-color: var(--card-bg);
   border-right: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  transition: width var(--transition-speed) ease;
+  transition: width 0.3s ease;
   z-index: 100;
   box-shadow: var(--shadow);
+  position: relative;
 }
-.sidebar.collapsed {
-  width: var(--sidebar-collapsed-width);
+
+.pm-sidebar.pm-collapsed {
+  width: 60px; /* collapsed width */
 }
-.logo-container {
+
+.pm-logo-container {
   height: var(--header-height);
   padding: 0 16px;
   display: flex;
@@ -20,7 +23,8 @@
   justify-content: space-between;
   border-bottom: 1px solid var(--border);
 }
-.logo {
+
+.pm-logo {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -28,7 +32,8 @@
   font-size: 18px;
   color: var(--primary);
 }
-.toggle-button {
+
+.pm-toggle-button {
   background: transparent;
   border: none;
   color: var(--text);
@@ -38,62 +43,70 @@
   justify-content: center;
   padding: 8px;
   border-radius: 50%;
-  transition: background-color var(--transition-speed) ease;
+  transition: background-color 0.3s ease;
 }
-.toggle-button:hover {
+
+.pm-toggle-button:hover {
   background-color: var(--border);
 }
-.nav-menu {
+
+.pm-nav-menu {
   display: flex;
   flex-direction: column;
   padding: 16px 0;
   flex: 1;
   overflow-y: auto;
 }
-.nav-item {
+
+.pm-nav-item {
   display: flex;
   align-items: center;
   padding: 12px 16px;
   color: var(--text);
   text-decoration: none;
-  transition: background-color var(--transition-speed) ease;
+  transition: background-color 0.3s ease;
   border-left: 3px solid transparent;
   gap: 12px;
   margin: 4px 0;
 }
-.nav-item:hover {
+
+.pm-nav-item:hover {
   background-color: rgba(102, 187, 106, 0.1);
   text-decoration: none;
 }
-.nav-item.active {
+
+.pm-nav-item.pm-active {
   background-color: rgba(102, 187, 106, 0.15);
   border-left-color: var(--primary);
   color: var(--primary);
   font-weight: 500;
 }
-.nav-icon {
+
+.pm-nav-icon {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 24px;
 }
+
+/* Mobile */
 @media screen and (max-width: 768px) {
-  .sidebar {
+  .pm-sidebar {
     position: fixed;
+    width: 100%;
+    height: auto;
     top: 0;
     left: 0;
-    height: auto;
-    width: 100%;
     border-right: none;
     border-bottom: 1px solid var(--border);
   }
-  .sidebar.collapsed {
+  .pm-sidebar.pm-collapsed {
     height: var(--header-height);
   }
-  .nav-menu {
+  .pm-nav-menu {
     display: none;
   }
-  .sidebar:not(.collapsed) .nav-menu {
+  .pm-sidebar:not(.pm-collapsed) .pm-nav-menu {
     display: flex;
   }
 }

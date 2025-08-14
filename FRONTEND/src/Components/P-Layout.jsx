@@ -6,12 +6,12 @@ import '../styles/P-Layout.css';
 
 const Layout = () => {
   return (
-    <div className="layout">
+    <div className="pm-layout">
       <Sidebar />
-      <div className="content-container">
+      <div className="pm-content-container">
         <Header />
-        <main className="main-content">
-          <Outlet /> {/* This will render the current page content */}
+        <main className="pm-main-content">
+          <Outlet />
         </main>
       </div>
     </div>

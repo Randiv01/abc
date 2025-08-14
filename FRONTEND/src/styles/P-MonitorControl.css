@@ -73,7 +73,11 @@
 }
 .chart-card {
   padding: 24px;
+  width: 95%;
+  max-width: 900px; /* optional cap */
+  margin: 0 auto; /* center horizontally */
 }
+
 .chart-card h3 {
   margin-top: 0;
   margin-bottom: 16px;
